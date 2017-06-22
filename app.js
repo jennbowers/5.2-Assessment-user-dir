@@ -10,17 +10,21 @@ app.engine('mustache', mustacheExpress());
 app.set('views', './views');
 app.set('view engine', 'mustache');
 
-// app.get('/', function(req, res) {
-//   res.send('HELLO');
-// });
 
 app.get('/directory', function(req, res) {
-  // res.send('HELLO');
-  // console.log(data);
-
-    console.log(data);
-
+    // console.log(data);
   res.render('directory', data);
+});
+
+app.get('/:id', function(req, res) {
+  var user = {};
+  for (var i = 0; i < data.users.length; i++) {
+    user = data.users[i];
+    if (user.id == req.params.id) {
+      break;
+    }
+  }
+  res.render('profile', user);
 });
 
 app.listen(3000, function() {

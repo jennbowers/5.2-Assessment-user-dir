@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    {{#users}}
-    <div class="worker">
-      <img src={{avatar}} alt="{{name}}'s image">
-      <p class="worker-name">{{name}}</p>
-      <p class="worker-job">{{job}}</p>
-      <p class="worker-company">{{company}}</p>
+    <div class="flex-container">
+      {{#users}}
+      <a href="{{id}}" class="worker" >
+        <img src={{avatar}}>
+        <h3 class="worker-name">{{name}}</h3>
+        <div class="worker-job">{{job}}</div>
+        <div class="worker-no-job">{{^job}}Available for hire{{/job}}</div>
+        <div class="worker-company">{{company}}</div>
+        <div class="worker-no-company">{{^company}}{{/company}}</div>
+      </a>
+      {{/users}}
     </div>
-    {{/users}}
-
 
   </body>
 </html>
