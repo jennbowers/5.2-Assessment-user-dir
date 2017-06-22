@@ -14,13 +14,14 @@
         </span>
         <span class="profile-info">
           <h1 class="profile-name">{{name}}</h1>
-          <p class="profile-address">{{address.city}}, {{address.country}} | {{job}}, {{company}}</p>
+          <span class="profile-address">{{address.city}} {{address.country}} | {{job}} {{company}}</span>
+          {{^job}}<span class="profile-no-job">Available for hire</span>{{/job}}
           <p class="profile-contact">{{email}} | {{phone}}</p>
         </span>
       </div>
       <div class="bottom-row">
         <span class="profile-headers">
-          <h3>Education</h3>
+          {{#university}}<h3>Education</h3>{{/university}}
           <h3>Skills</h3>
       </span>
         <span class="profile-edu-skills">

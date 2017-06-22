@@ -85,13 +85,18 @@ span {
 .profile-name {
   font-size: 45px;
   font-weight: 400;
-  margin: 0px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.profile-no-job {
+  color: #CB635E;
 }
 
 .profile-headers {
   text-align: right;
   vertical-align: top;
-  margin-left: 73px;
+  width: 150px;
 }
 
 .profile-edu {
