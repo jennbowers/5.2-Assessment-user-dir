@@ -11,8 +11,7 @@ app.set('views', './views');
 app.set('view engine', 'mustache');
 
 
-app.get('/directory', function(req, res) {
-    // console.log(data);
+app.get('/', function(req, res) {
   res.render('directory', data);
 });
 
@@ -29,4 +28,4 @@ app.get('/:id', function(req, res) {
 
 app.listen(3000, function() {
   console.log('Successfully started express application!');
-})
+});
